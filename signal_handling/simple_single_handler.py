@@ -28,17 +28,22 @@ def signal_handler_another_one(number, stack):
     sys.exit(1)
 
 
+# This function registers with signal number and the corresponding
+# handler
 def register_signals():
     signal.signal(signal.SIGUSR1, signal_handler_simple)
     signal.signal(signal.SIGUSR2, signal_handler_another_one)
 
 
+# Simple driver that keeps the scripting running until someone sends a
+# signal to us using kill (or equivalent)
 def run():
     while True:
         print("Waiting to be toasted - ", os.getpid())
         time.sleep(5)
 
 
+# Put them in burner
 register_signals()
 run()
 
