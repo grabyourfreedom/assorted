@@ -1,5 +1,5 @@
-# This is a simple program that creates a new process using fork in Python.
-# There is nothing complex here if you already did something like this in
+# This is a simple program that creates a new process using fork. There
+# is nothing complex here if you already did something like this in
 # C/C++. This code just shows how this can be done in Python though
 
 import os
