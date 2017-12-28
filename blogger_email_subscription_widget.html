@@ -33,8 +33,8 @@
 }
 .subscribe_cancel {
   position: relative;
-  top: -2%;
-  right: -2%;
+  top: -9%;
+  right: -4%;
   height: 25px;
   width: 25px;
   border: none;
@@ -73,7 +73,7 @@ function getCookie(key) {
   return keyValue ? keyValue[2] : null;
 }
 $( document ).ready(function($) {
-    var popup_timeout = 10
+    var popup_timeout = 20
     $("#subscribe_dialog").hide()
     setTimeout(show_subscribe, popup_timeout * 1000)
     $("#email_cancel").click(function(){
@@ -94,8 +94,8 @@ function dismiss_email_subscribe() {
 </script>
 </head>
 <body>
-  <div class='subscribe_dialog' id="subscribe_dialog">
-<div class='subscribe_cancel'><img class="subscribe_cancel" id="email_cancel" src="https://2.bp.blogspot.com/-nRNP6gMjDS8/WkRO9jkfZhI/AAAAAAAAFNA/8fyotKYigq8I9HHMIXo6Scrxa8ZS5EVaQCLcBGAs/s1600/icons8-delete-50.png"/></div>
+ <div class='subscribe_dialog' id="subscribe_dialog">
+<div class='subscribe_cancel'><img class="subscribe_cancel" id="email_cancel" src="https://2.bp.blogspot.com/-KfOQ1b9yxC8/WkRbYLp_D7I/AAAAAAAAFNU/DqlDyV__1FMJsELHeauh6Q6SjHPpA9OgwCLcBGAs/s1600/icons8-cancel-50%2B%25281%2529.png"/></div>
     <div class="subscribe-heading">
     <h3> NEVER MISS A POST FROM UNSTUCK - TO GET UNSTUCK </h3></div>
   <center>
@@ -109,7 +109,6 @@ function dismiss_email_subscribe() {
 <br/>
 <div> Managed by <a href="https://feedburner.google.com">Feedburner. </a>Widget by <a href="http://unstuck.grabyourfreedom.in">Lakshmi N</a></div>
 </p>
-
   </center>
   </div>
 </body>
