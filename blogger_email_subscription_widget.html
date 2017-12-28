@@ -6,17 +6,16 @@
   background-color: #2C3E50;
   color: #FFFFFF;
   position: fixed;
-  z-index: 99999999;
+  z-index: 98;
   bottom: 50%;
   right: 40%;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -goog-ms-border-radius: 10px;
   padding: 10px;
+  padding-bottom: 20px;
   border-width: 0px;
   opacity: 1;
-  height: 250px;
-  width: 400px;
 }
 .subscribe-heading {
   font-weight: 15px;
@@ -24,7 +23,6 @@
   font-weight: bold;
   margin-bottom: 25px;
 }
-
 .subscribe_button {
   background-color: #117A65;
   color: #FFFFFF;
@@ -33,38 +31,33 @@
   text-align: center;
   border: none;
 }
-
 .subscribe_cancel {
-  background-color: #E74C3C;
-  color: #FFFFFF;
-  margin: 5px;
-  height: 30px;
-  width: 70px;
-  text-align: center;
+  position: relative;
+  top: -2%;
+  right: -2%;
+  height: 25px;
+  width: 25px;
   border: none;
+  float: right;
+  z-index: 99;
 }
-
 .rounded {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -goog-ms-border-radius: 5px;
   border-radius: 5px;
-
 }
 .subscribe_feedburner {
   font-size: 12px;
 }
-
 .subscribe_feedburner {
   color: #FFFFFF;
 }
-
 .email_text {
   height: 20px;
   width: 150px;
   padding: 5px;
 }
-
 </style>
 
 <script>
@@ -75,12 +68,10 @@ function setCookie(key, value) {
   expires.setTime(expires.getTime() + expiry_date);
   document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
 }
-
 function getCookie(key) {
   var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
   return keyValue ? keyValue[2] : null;
 }
-
 $( document ).ready(function($) {
     var popup_timeout = 10
     $("#subscribe_dialog").hide()
@@ -90,23 +81,21 @@ $( document ).ready(function($) {
       dismiss_email_subscribe();
     });
 });
-
 function show_subscribe() {
   cookieValue = getCookie("unstuck")
   if (cookieValue == null) {
     $("#subscribe_dialog").show(1000)
   }
 }
-
 function dismiss_email_subscribe() {
   setCookie('unstuck','email_subscribe');
   $("#subscribe_dialog").hide()
 }
-
 </script>
 </head>
 <body>
   <div class='subscribe_dialog' id="subscribe_dialog">
+<div class='subscribe_cancel'><img class="subscribe_cancel" id="email_cancel" src="https://2.bp.blogspot.com/-nRNP6gMjDS8/WkRO9jkfZhI/AAAAAAAAFNA/8fyotKYigq8I9HHMIXo6Scrxa8ZS5EVaQCLcBGAs/s1600/icons8-delete-50.png"/></div>
     <div class="subscribe-heading">
     <h3> NEVER MISS A POST FROM UNSTUCK - TO GET UNSTUCK </h3></div>
   <center>
@@ -116,7 +105,6 @@ function dismiss_email_subscribe() {
     <input class='subscribe_button rounded' type='submit' value='Subscribe :-)'/>
   <br/>
   </form>
-<button class='subscribe_cancel rounded' id="email_cancel" type='button'>Close :-(</button>
 <p class="subscribe_feedburner">PROTECTION, TRUST & SPAMFREE - Subscribe with Confidence.
 <br/>
 <div> Managed by <a href="https://feedburner.google.com">Feedburner. </a>Widget by <a href="http://unstuck.grabyourfreedom.in">Lakshmi N</a></div>
