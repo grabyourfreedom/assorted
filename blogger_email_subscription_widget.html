@@ -63,8 +63,7 @@
 <script>
 function setCookie(key, value) {
   var expires = new Date();
-  var expiry_date = 10 * 24 * 60 * 1000
-  expiry_date = 60 * 1000
+  var expiry_date = 2 * 24 * 60 * 1000
   expires.setTime(expires.getTime() + expiry_date);
   document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
 }
@@ -73,7 +72,7 @@ function getCookie(key) {
   return keyValue ? keyValue[2] : null;
 }
 $( document ).ready(function($) {
-    var popup_timeout = 20
+    var popup_timeout = 10
     $("#subscribe_dialog").hide()
     setTimeout(show_subscribe, popup_timeout * 1000)
     $("#email_cancel").click(function(){
@@ -84,12 +83,12 @@ $( document ).ready(function($) {
 function show_subscribe() {
   cookieValue = getCookie("unstuck")
   if (cookieValue == null) {
-    $("#subscribe_dialog").show(1000)
+    $("#subscribe_dialog").slideDown(2000)
   }
 }
 function dismiss_email_subscribe() {
   setCookie('unstuck','email_subscribe');
-  $("#subscribe_dialog").hide()
+  $("#subscribe_dialog").hide(500)
 }
 </script>
 </head>
@@ -109,6 +108,7 @@ function dismiss_email_subscribe() {
 <br/>
 <div> Managed by <a href="https://feedburner.google.com">Feedburner. </a>Widget by <a href="http://unstuck.grabyourfreedom.in">Lakshmi N</a></div>
 </p>
+
   </center>
   </div>
 </body>
