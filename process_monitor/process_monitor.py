@@ -3,6 +3,7 @@ import time
 import configparser
 
 
+# An utility function that creates a new process
 def create_process(command_name, program_name, arguments, startup_delay,
                    daemon, restart_count, comment):
     args = arguments.split(",")
@@ -12,6 +13,7 @@ def create_process(command_name, program_name, arguments, startup_delay,
     return process
 
 
+# A class that models a process that needs to be created/scheduled
 class Process:
     def __init__(self, name, command, args, start_delay=0, daemon="no", restart_count=5, comment=""):
         self.name = name
@@ -24,6 +26,7 @@ class Process:
         self.system_pid = 0
         self.fork_error = 0
 
+    # The function creates a process and overlays given program
     def fork_and_exec(self):
         retry = True
         fork_count = 0
@@ -66,6 +69,7 @@ class ProcessMonitorCfgReader:
         return self.processes
 
 
+# The class that models the process monitor
 class ProcessMonitor:
     def __init__(self, cfg_file):
         self.processes = []
