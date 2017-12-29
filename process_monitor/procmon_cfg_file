@@ -1,0 +1,18 @@
+[procmon config template]
+command_name = simple ls
+program_name = /tmp/ls
+arguments = -la
+daemon = no
+startup_delay = 1
+restart_count = 5
+comment = "This section shows an example of config file and will completely be ignored when the file is parsed"
+
+
+[ls]
+command_name = simple ls
+program_name = /bin/ls
+arguments = -lrt
+daemon = no
+startup_delay = 1
+restart_count = 5
+comment = "A command to list a directory"
