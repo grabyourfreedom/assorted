@@ -1,6 +1,9 @@
 import unittest
 from prime_numbers import is_prime
 
+# Write this as a supplement to my blog post
+# http://unstuck.grabyourfreedom.in/2018/01/why-unit-test-is-important.html
+
 
 class TestPrimeNumber(unittest.TestCase):
 
