@@ -22,8 +22,16 @@
   font-weight: 15px;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
+
+subscribe-subheading {
+  font-weight: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .subscribe_button {
   background-color: #117A65;
   color: #FFFFFF;
@@ -59,12 +67,16 @@
   width: 150px;
   padding: 5px;
 }
+
+.email_label {
+    font-size: 13px;
+}
 </style>
 
 <script>
 function setCookie(key, value) {
   var expires = new Date();
-  var expiry_date = 2 * 24 * 60 * 60 * 1000
+  var expiry_date = 1 * 24 * 60 * 60 * 1000
   expires.setTime(expires.getTime() + expiry_date);
   document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
 }
@@ -96,11 +108,16 @@ function dismiss_email_subscribe() {
 <body>
  <div class='subscribe_dialog' id="subscribe_dialog">
 <div class='subscribe_cancel'><img class="subscribe_cancel" id="email_cancel" src="https://2.bp.blogspot.com/-KfOQ1b9yxC8/WkRbYLp_D7I/AAAAAAAAFNU/DqlDyV__1FMJsELHeauh6Q6SjHPpA9OgwCLcBGAs/s1600/icons8-cancel-50%2B%25281%2529.png"/></div>
-    <div class="subscribe-heading">
-    <h3> NEVER MISS A POST FROM UNSTUCK - TO GET UNSTUCK </h3></div>
+    <div class="subscribe-heading"><h3>
+    NEVER MISS A POST FROM UNSTUCK</h3>
+    <div class="subscribe-subheading">
+    Technology, Programming and Leadership
+</div>
+</div>
+    
   <center>
   <form action='http://feedburner.google.com/fb/a/mailverify' method='post' onsubmit='window.open(&apos;http://feedburner.google.com/fb/a/mailverify?uri=grabyourfreedom&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
-    <p class="email_label"><h4>Enter your Email Address: </h4> <br/> <input class='rounded email_text' id="email_field" name='email' style='width:200px' type='text'/></p><input name='uri' type='hidden' value='grabyourfreedom'/>
+    <p class="email_label">Enter your Email Address: <br/> <input class='rounded email_text' id="email_field" name='email' style='width:200px' type='text'/></p><input name='uri' type='hidden' value='grabyourfreedom'/>
     <input name='loc' type='hidden' value='en_US'/>
     <input class='subscribe_button rounded' type='submit' value='Subscribe :-)'/>
   <br/>
